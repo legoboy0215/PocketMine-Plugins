@@ -1,0 +1,17 @@
+name: PlanB
+main: planb\PlanBAPI
+version: 1.1.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Hackers can't cripple your server anymore!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/PlanB
+permissions:
+ planb:
+  default: true
+  children:
+   planb.command:
+    default: true
+    children:
+     planb.command.planb:
+      default: true

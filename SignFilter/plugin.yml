@@ -1,0 +1,17 @@
+name: SignFilter
+main: signfilter\SignFilterAPI
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+author: Gamecrafter
+description: Text on signs can now be filtered!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/SignFilter
+permissions:
+ signfilter:
+  default: op
+  children:
+   signfilter.action:
+    default: op
+    children:
+     signfilter.action.bypass:
+      default: op

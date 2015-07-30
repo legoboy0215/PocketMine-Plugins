@@ -1,0 +1,12 @@
+#Configuration file for LocatorPro v1.0.0
+version: 1.0.0
+#Do not edit the version string, it is used for internal purposes
+plugin:
+ autoUpdate: true
+ #Set to true to enable automatic overwriting of this file when the plugin is updated
+integer:
+ roundPrecision: 8
+ #Sets how precise the coordinates decimal digits will be rounded, higher values are preferred
+location:
+ saveOnDeath: true
+ #Set to true to enable player's location being saved on death

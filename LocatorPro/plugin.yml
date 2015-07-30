@@ -1,0 +1,19 @@
+name: LocatorPro
+main: locatorpro\LocatorProAPI
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Everything is about the coordinates!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/LocatorPro
+permissions:
+ locatorpro:
+  default: op
+  children:
+   locatorpro.action:
+    default: op
+   locatorpro.command:
+    default: op
+    children:
+     locatorpro.command.locatorpro:
+      default: true

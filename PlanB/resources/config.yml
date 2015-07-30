@@ -1,0 +1,8 @@
+#Configuration file for PlanB v1.1.0
+version: 1.1.0
+#Do not edit the version string, it is used for internal purposes
+backup:
+ kickReason: "Detected potential hacker"
+ #Sets the kick reason when a potential hacker is detected
+ notifyAll: true
+ #Set to true to announce when a potential hacker is detected and kicked
