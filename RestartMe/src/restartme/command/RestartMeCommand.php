@@ -35,7 +35,7 @@ class RestartMeCommand extends Command implements PluginIdentifiableCommand{
                 case 'add':
                     break;
                 case '?':
-                case 'help'
+                case 'help':
                     break;
                 case 'subtract':
                     break;

@@ -44,7 +44,7 @@ class EasyMessagesCommand extends Command implements PluginIdentifiableCommand{
                 case 'bt':
                 case 'broadcasttip':
                     break;
-                case '?'
+                case '?':
                 case 'help':
                     break;
                 case 'sm':
