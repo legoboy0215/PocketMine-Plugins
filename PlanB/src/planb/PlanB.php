@@ -7,7 +7,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class PlanBAPI extends PluginBase{
+class PlanB extends PluginBase{
     public function onEnable(){
         $this->saveFiles();
         $this->registerAll();
