@@ -2,12 +2,12 @@
 
 namespace easymessages\event;
 
-use easymessages\EasyMessagesAPI;
+use easymessages\EasyMessages;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\Listener;
 
 class EasyMessagesListener implements Listener{
-    public function __construct(EasyMessagesAPI $plugin){
+    public function __construct(EasyMessages $plugin){
         $this->plugin = $plugin;
     }
     public function getPlugin(){

@@ -4,10 +4,10 @@ namespace queryfacade\event;
 
 use pocketmine\event\server\QueryRegenerateEvent;
 use pocketmine\event\Listener;
-use queryfacade\QueryFacadeAPI;
+use queryfacade\QueryFacade;
 
 class QueryFacadeListener implements Listener{
-    public function __construct(QueryFacadeAPI $plugin){
+    public function __construct(QueryFacade $plugin){
         $this->plugin = $plugin;
     }
     public function getPlugin(){

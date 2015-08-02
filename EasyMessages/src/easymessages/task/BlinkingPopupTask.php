@@ -2,11 +2,11 @@
 
 namespace easymessages\task;
 
-use easymessages\EasyMessagesAPI;
+use easymessages\EasyMessages;
 use pocketmine\scheduler\PluginTask;
 
 class BlinkingPopupTask extends PluginTask{
-    public function __construct(EasyMessagesAPI $plugin){
+    public function __construct(EasyMessages $plugin){
         parent::__construct($plugin);
         $this->plugin = $plugin;
     }

@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
-class LocatorProAPI extends PluginBase{
+class LocatorPro extends PluginBase{
     private $locations;
     public function onEnable(){
     	$this->saveFiles();

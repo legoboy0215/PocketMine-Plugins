@@ -6,7 +6,7 @@ use pocketmine\plugin\PluginBase;
 use queryfacade\command\QueryFacadeCommand;
 use queryfacade\event\QueryFacadeListener;
 
-class QueryFacadeAPI extends PluginBase{
+class QueryFacade extends PluginBase{
     private $queryfacade;
     public function onEnable(){
         $this->saveFiles();

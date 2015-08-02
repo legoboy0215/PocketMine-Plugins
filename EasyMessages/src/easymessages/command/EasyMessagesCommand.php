@@ -2,13 +2,13 @@
 
 namespace easymessages\command;
 
-use easymessages\EasyMessagesAPI;
+use easymessages\EasyMessages;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 
 class EasyMessagesCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(EasyMessagesAPI $plugin){
+    public function __construct(EasyMessages $plugin){
         parent::__construct(
             "easymessages", 
             "Shows all the sub-commands for EasyMessages", 

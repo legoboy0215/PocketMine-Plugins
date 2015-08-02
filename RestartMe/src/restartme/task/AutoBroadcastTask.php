@@ -3,10 +3,10 @@
 namespace restartme\task;
 
 use pocketmine\scheduler\PluginTask;
-use restartme\RestartMeAPI;
+use restartme\RestartMe;
 
 class AutoBroadcastTask extends PluginTask{
-    public function __construct(RestartMeAPI $plugin){
+    public function __construct(RestartMe $plugin){
         parent::__construct($plugin);
         $this->plugin = $plugin;
     }

@@ -10,7 +10,7 @@ use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
 
 class LocatorProListener implements Listener{
-    public function __construct(LocatorProAPI $plugin){
+    public function __construct(LocatorPro $plugin){
         $this->plugin = $plugin;
     }
     public function onPlayerDeath(PlayerDeathEvent $event){

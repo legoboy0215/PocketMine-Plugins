@@ -2,14 +2,14 @@
 
 namespace restartme\command;
 
-use restartme\RestartMeAPI;
+use restartme\RestartMe;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 
 class RestartMeCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(RestartMeAPI $plugin){
+    public function __construct(RestartMe $plugin){
         parent::__construct(
             "restartme", 
             "Shows all the sub-commands for RestartMe", 

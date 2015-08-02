@@ -15,7 +15,7 @@ use pocketmine\utils\Config;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class iManagerAPI extends PluginBase{
+class iManager extends PluginBase{
     private $exempts;
     private $ip;
     public function onEnable(){

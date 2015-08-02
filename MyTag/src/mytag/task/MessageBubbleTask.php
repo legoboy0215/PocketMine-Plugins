@@ -2,12 +2,12 @@
 
 namespace mytag\task;
 
-use mytag\MyTagAPI;
+use mytag\MyTag;
 use pocketmine\scheduler\PluginTask;
 use pocketmine\Player;
 
 class MessageBubbleTask extends PluginTask{
-    public function __construct(MyTagAPI $plugin, Player $player, $message){
+    public function __construct(MyTag $plugin, Player $player, $message){
         $this->plugin = $plugin;
     }
     public function getPlugin(){

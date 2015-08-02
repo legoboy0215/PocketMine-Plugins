@@ -7,7 +7,7 @@ use restartme\command\RestartMeCommand;
 use restartme\task\AutoBroadcastTask;
 use restartme\task\RestartServerTask;
 
-class RestartMeAPI extends PluginBase{
+class RestartMe extends PluginBase{
     public $restartme;
     public function onEnable(){
         $this->saveFiles();

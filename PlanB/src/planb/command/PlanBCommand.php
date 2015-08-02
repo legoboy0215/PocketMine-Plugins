@@ -2,14 +2,14 @@
 
 namespace planb\command;
 
-use planb\PlanBAPI;
+use planb\PlanB;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 
 class PlanBCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(PlanBAPI $plugin){
+    public function __construct(PlanB $plugin){
         parent::__construct(
             "planb", 
             "Shows all the sub-commands for PlanB", 

@@ -5,10 +5,10 @@ namespace queryfacade\command;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
-use queryfacade\QueryFacadeAPI;
+use queryfacade\QueryFacade;
 
 class QueryFacadeCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(QueryFacadeAPI $plugin){
+    public function __construct(QueryFacade $plugin){
         parent::__construct(
             "queryfacade", 
             "Shows all the sub-commands for /queryfacade", 

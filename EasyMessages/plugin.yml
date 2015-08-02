@@ -1,5 +1,5 @@
 name: EasyMessages
-main: easymessages\EasyMessagesAPI
+main: easymessages\EasyMessages
 version: 1.2.0
 api: 1.12.0
 load: POSTWORLD

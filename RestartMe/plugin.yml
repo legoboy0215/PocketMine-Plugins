@@ -1,5 +1,5 @@
 name: RestartMe
-main: restartme\RestartMeAPI
+main: restartme\RestartMe
 version: 1.0.0
 api: 1.10.0
 load: STARTUP

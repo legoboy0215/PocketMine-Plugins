@@ -2,14 +2,14 @@
 
 namespace locatorpro\command;
 
-use locatorpro\LocatorProAPI;
+use locatorpro\LocatorPro;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\Player;
 
 class LocatorProCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(LocatorProAPI $plugin){
+    public function __construct(LocatorPro $plugin){
         parent::__construct(
             "locatorpro", 
             "Shows all the sub-commands for /locatorpro", 

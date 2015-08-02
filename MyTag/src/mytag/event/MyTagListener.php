@@ -2,14 +2,14 @@
 
 namespace mytag\event;
 
-use mytag\MyTagAPI;
+use mytag\MyTag;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 
 class MyTagListener implements Listener{
-    public function __construct(MyTagAPI $plugin){
+    public function __construct(MyTag $plugin){
     	$this->plugin = $plugin;
     }
     public function getPlugin(){

@@ -2,14 +2,14 @@
 
 namespace imanager\command;
 
-use imanager\iManagerAPI;
+use imanager\iManager;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\Player;
 
 class iManagerCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(iManagerAPI $plugin){
+    public function __construct(iManager $plugin){
         parent::__construct(
             "imanager", 
             "Shows all the sub-commands for iManager", 

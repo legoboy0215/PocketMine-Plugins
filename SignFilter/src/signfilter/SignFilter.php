@@ -7,7 +7,7 @@ use pocketmine\tile\Sign;
 use pocketmine\tile\Tile;
 use signfilter\event\SignFilterListener;
 
-class SignFilterAPI extends PluginBase{
+class SignFilter extends PluginBase{
     public function onEnable(){
         $this->saveFiles();
 	$this->registerAll();

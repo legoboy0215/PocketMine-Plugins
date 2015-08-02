@@ -8,7 +8,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
-class MyTagAPI extends PluginBase{
+class MyTag extends PluginBase{
     public $nametags;
     public function onEnable(){
         $this->saveFiles();

@@ -2,14 +2,14 @@
 
 namespace mytag\command;
 
-use mytag\MyTagAPI;
+use mytag\MyTag;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\Player;
 
 class MyTagCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(MyTagAPI $plugin){
+    public function __construct(MyTag $plugin){
         parent::__construct(
             "mytag", 
             "Shows all the sub-commands for /mytag", 

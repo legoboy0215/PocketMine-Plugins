@@ -16,7 +16,7 @@ use easymessages\task\ScrollingTipTask;
 use easymessages\task\UpdateMotdTask;
 use pocketmine\plugin\PluginBase;
 
-class EasyMessagesAPI extends PluginBase{
+class EasyMessages extends PluginBase{
     private $easymessages;
     public function onEnable(){
         $this->saveFiles();

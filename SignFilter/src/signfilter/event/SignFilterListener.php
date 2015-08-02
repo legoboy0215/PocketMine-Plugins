@@ -4,10 +4,10 @@ namespace signfilter\event;
 
 use pocketmine\event\block\SignChangeEvent;
 use pocketmine\event\Listener;
-use signfilter\SignFilterAPI;
+use signfilter\SignFilter;
 
 class SignFilterListener implements Listener{
-    public function __construct(SignFilterAPI $plugin){
+    public function __construct(SignFilter $plugin){
         $this->plugin = $plugin;
     }
     public function getPlugin(){
