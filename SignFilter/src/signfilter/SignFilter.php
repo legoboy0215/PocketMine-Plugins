@@ -33,26 +33,14 @@ class SignFilter extends PluginBase{
     private function registerAll(){
     	$this->getServer()->getPluginManager()->registerEvents(new SignFilterListener($this), $this);
     }
-    public function hasBadText(Tile $tile){
-    	if($tile instanceof Sign){
-    	    return $this->checkText($tile) === true;
-    	}
-    	else{
-    	    return null;
-    	}
+    public function hasBadText($line){
+	return $this->checkText($line);
     }
-    public function checkText(Tile $tile){
-    	if($tile instanceof Sign){
-    	    foreach($tile->getText() as $text){
-    	    	foreach($this->getConfig()->get("badWords") as $word){
-    	    	    if(stristr($text, $word)){
-    	    	    	return true;
-    	    	    }
-    	    	    else{
-    	    	    	return false;
-    	    	    }
-    	    	}
-    	    }
-    	}
+    public function checkText($line){
+	foreach($this->getConfig()->get("badWords") as $word){
+	    if(stristr(trim($line), $word)){
+	    	return true;
+	    }
+	}
     }
 }
