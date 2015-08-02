@@ -3,8 +3,6 @@
 namespace signfilter;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\tile\Sign;
-use pocketmine\tile\Tile;
 use signfilter\event\SignFilterListener;
 
 class SignFilter extends PluginBase{
