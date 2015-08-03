@@ -6,16 +6,16 @@ use pocketmine\scheduler\PluginTask;
 use restartme\RestartMe;
 
 class CheckMemoryTask extends PluginTask{
-	public function __construct(RestartMe $plugin){
-		parent::__construct($plugin);
-		$this->plugin = $plugin;
+    public function __construct(RestartMe $plugin){
+	parent::__construct($plugin);
+	$this->plugin = $plugin;
+    }
+    public function getPlugin(){
+	return $this->plugin;
+    }
+    public function onRun($currentTick){
+	if(mem_get_usage(true) > $this->getPlugin()->getConfig()->getNested("restart.memoryLimit")){
+
 	}
-	public function getPlugin(){
-		return $this->plugin;
-	}
-	public function onRun($currentTick){
-		if(mem_get_usage(true) > $this->getPlugin()->getConfig()->getNested("restart.memoryLimit")){
-		
-		}
-	}
+    }
 }
