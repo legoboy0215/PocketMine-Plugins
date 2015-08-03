@@ -5,6 +5,7 @@ namespace restartme;
 use pocketmine\plugin\PluginBase;
 use restartme\command\RestartMeCommand;
 use restartme\task\AutoBroadcastTask;
+use restartme\task\CheckMemoryTask;
 use restartme\task\RestartServerTask;
 
 class RestartMe extends PluginBase{
