@@ -2,15 +2,16 @@
   <img src="https://raw.githubusercontent.com/Gamecrafter/PocketMine-Plugins/master/SkinTools/images/icon.png?raw=true"/>
 </p>
 #SkinTools
-Have fun with your skins!
+Skins have never been this fun to mess around with!
 
 ###Commands:
-Main commands: **skintools**, **st**
+Main command: **skintools**, **st**
 
 |Sub-command|Description|
 |----|-----------|
 |help|Shows all the sub-commands for SkinTools|
 |morph|Sets user's skin to that of the specified player's|
+|swap|Swaps skins with the specified player|
 
 ###Releases:
 |Version|Release Date|Download|
