@@ -47,6 +47,7 @@ so.
 |QueryFacade|1.0.0|no|
 |RestartMe|1.0.0|no|
 |SignFilter|1.0.0|no|
+|SkinTools|1.0.0|no|
 |iManager|1.2.0|yes|
 
 ###To-do:
