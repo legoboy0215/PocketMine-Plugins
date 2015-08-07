@@ -4,7 +4,7 @@ version: 1.0.0
 api: 1.12.0
 load: POSTWORLD
 author: Gamecrafter
-description: Have fun with your skins!
+description: Skins have never been this fun to mess around with!
 website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/SkinTools
 permissions:
  skintools:
