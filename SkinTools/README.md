@@ -4,6 +4,14 @@
 #SkinTools
 Have fun with your skins!
 
+###Commands:
+Main commands: **skintools**, **st**
+
+|Sub-command|Description|
+|----|-----------|
+|help|Shows all the sub-commands for SkinTools|
+|morph|Sets user's skin to that of the specified player's|
+
 ###Releases:
 |Version|Release Date|Download|
 |:-------:|------------|:--------:|
