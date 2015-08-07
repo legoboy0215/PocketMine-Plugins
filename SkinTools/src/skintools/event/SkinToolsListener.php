@@ -2,7 +2,10 @@
 
 namespace skintools\event;
 
+use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
+use pocketmine\Player;
 use skintools\SkinTools;
 
 class SkinToolsListener implements Listener{
@@ -11,5 +14,15 @@ class SkinToolsListener implements Listener{
     }
     public function getPlugin(){
         return $this->plugin;
+    }
+    public function onEntityDamage(EntityDamageEvent $event){
+        if($event instanceof EntityDamageByEntityEvent){
+            if($event->getDamager() instanceof Player and $event->getEntity() instanceof Player){
+                if($this->getPlugin()->hasTouchMode($event->getDamager())){
+                    $event->setCancelled(true);
+                    $this->getPlugin()->setStolenSkin($event->getDamager(), $event->getEntity());
+                }
+            }
+        }
     }
 }
