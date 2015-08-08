@@ -32,14 +32,14 @@ class RestartMeCommand extends Command implements PluginIdentifiableCommand{
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){
             switch(strtolower($args[0])){
-                case 'add':
+                case "add":
                     break;
-                case '?':
-                case 'help':
+                case "?":
+                case "help":
                     break;
-                case 'subtract':
+                case "subtract":
                     break;
-                case 'time':
+                case "time":
                     break;
             }
         }

@@ -35,26 +35,26 @@ class EasyMessagesCommand extends Command implements PluginIdentifiableCommand{
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){
             switch(strtolower($args[0])){
-                case 'bm':
-                case 'broadcastmessage':
+                case "bm":
+                case "broadcastmessage":
                     break;
-                case 'bp':
-                case 'broadcastpopup':
+                case "bp":
+                case "broadcastpopup":
                     break;
-                case 'bt':
-                case 'broadcasttip':
+                case "bt":
+                case "broadcasttip":
                     break;
-                case '?':
-                case 'help':
+                case "?":
+                case "help":
                     break;
-                case 'sm':
-                case 'sendmessage':
+                case "sm":
+                case "sendmessage":
                     break;
-                case 'sp':
-                case 'sendpopup':
+                case "sp":
+                case "sendpopup":
                     break;
-                case 'st':
-                case 'sendtip':
+                case "st":
+                case "sendtip":
                     break;
             }
         }

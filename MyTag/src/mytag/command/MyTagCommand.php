@@ -36,22 +36,22 @@ class MyTagCommand extends Command implements PluginIdentifiableCommand{
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){
 	    switch(strtolower($args[0])){
-	    	case 'address':
+	    	case "address":
 	    	    break;
-	    	case 'chat':
+	    	case "chat":
 	    	    break;
-	    	case 'health':
+	    	case "health":
 	    	    break;
-	    	case '?':
-	    	case 'help':
+	    	case "?":
+	    	case "help":
 	    	    break;
-	    	case 'hide':
+	    	case "hide":
 	      	    break;
-	      	case 'restore':
+	      	case "restore":
 	            break;
-	        case 'set':
+	        case "set":
 	            break;
-	        case 'view':
+	        case "view":
 	            break;
 	    }
     	}

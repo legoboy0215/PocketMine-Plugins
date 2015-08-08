@@ -33,19 +33,19 @@ class LocatorProCommand extends Command implements PluginIdentifiableCommand{
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){
             switch(strtolower($args[0])){
-                case 'back':
+                case "back":
                     break;
-                case '?':
-                case 'help':
+                case "?":
+                case "help":
                     break;
-                case 'gp':
-                case 'getpos':
+                case "gp":
+                case "getpos":
                     break;
-                case 'sp':
-                case 'savepos':
+                case "sp":
+                case "savepos":
                     break;
-                case 'ss':
-                case 'setspawn':
+                case "ss":
+                case "setspawn":
                     break;
             }
         }

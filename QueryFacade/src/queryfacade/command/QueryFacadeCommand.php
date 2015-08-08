@@ -28,8 +28,8 @@ class QueryFacadeCommand extends Command implements PluginIdentifiableCommand{
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){
             switch(strtolower($args[0])){
-                case '?':
-                case 'help':
+                case "?":
+                case "help":
                     break;
             }
         }
