@@ -8,7 +8,7 @@ use pocketmine\command\PluginIdentifiableCommand;
 use skintools\SkinTools;
 
 class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
-    public function __construct(EasyMessages $plugin){
+    public function __construct(SkinTools $plugin){
         parent::__construct(
             "skintools", 
             "Shows all the sub-commands for SkinTools", 
@@ -29,6 +29,22 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
             switch(strtolower($args[0])){
                 case "?":
                 case "help":
+                    break;
+                case "morph":
+                    if($sender instanceof Player and isset($args[1])){
+                        if($sender->getServer()->getPlayer($args[1]) !== null){
+                            $this->getPlugin()->setStolenSkin($sender, $sender->getServer()->getPlayer($args[1]));
+                            $sender->sendMessage("You got ".$sender->getServer()->getPlayer($args[1])->getName()."'s skin.");
+                        }
+                    }
+                    break;
+                case "swap":
+                    if($sender instanceof Player){
+                        
+                    }
+                    else{
+                        
+                    }
                     break;
             }
         }
