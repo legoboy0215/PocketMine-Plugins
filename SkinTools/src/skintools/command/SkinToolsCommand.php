@@ -5,6 +5,7 @@ namespace skintools\command;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginIdentifiableCommand;
+use pocketmine\Player;
 use skintools\SkinTools;
 
 class SkinToolsCommand extends Command implements PluginIdentifiableCommand{

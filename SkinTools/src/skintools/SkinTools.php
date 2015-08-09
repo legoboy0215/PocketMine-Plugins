@@ -18,7 +18,7 @@ class SkinTools extends PluginBase{
     }
     private function registerAll(){
     	$this->skintools = array();
-    	$this->getServer()->getCommandMap()->register("skintools", new SkinToolsCommand($this), $this);
+    	$this->getServer()->getCommandMap()->register("skintools", new SkinToolsCommand($this));
     	$this->getServer()->getPluginManager()->registerEvents(new SkinToolsListener($this), $this);
     }
     public function setStolenSkin(Player $player1, Player $player2){
