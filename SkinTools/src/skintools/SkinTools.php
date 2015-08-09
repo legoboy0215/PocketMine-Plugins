@@ -25,9 +25,15 @@ class SkinTools extends PluginBase{
     	$player1->setSkin($player2->getSkinData());
     }
     public function setTouchMode(Player $player, $touchMode = true){
-    	if(is_bool($skinOnTouch)) $this->skintools["touchMode"][strtolower($player->getName())] = $touchMode;
+    	if(is_bool($touchMode)) $this->skintools["touchMode"][strtolower($player->getName())] = $touchMode;
     }
     public function hasTouchMode(Player $player){
     	return $this->skintools["touchMode"][strtolower($player->getName())] === true;
+    }
+    public function storeSkinData(Player $player){
+        $this->skintools["skinData"][strtolower($player->getName())] = $player->getSkinData();
+    }
+    public function getSkinData(Player $player){
+        return $this->skintools["skinData"][strtolower($player->getName())];
     }
 }

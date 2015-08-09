@@ -32,10 +32,18 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
                 case "help":
                     break;
                 case "morph":
-                    if($sender instanceof Player and isset($args[1])){
-                        if($sender->getServer()->getPlayer($args[1]) !== null){
-                            $this->getPlugin()->setStolenSkin($sender, $sender->getServer()->getPlayer($args[1]));
-                            $sender->sendMessage("You got ".$sender->getServer()->getPlayer($args[1])->getName()."'s skin.");
+                    if($sender instanceof Player){
+                        if(isset($args[1])){
+                            if($sender->getServer()->getPlayer($args[1]) !== null){
+                                $this->getPlugin()->setStolenSkin($sender, $sender->getServer()->getPlayer($args[1]));
+                                $sender->sendMessage("§aYou got ".$sender->getServer()->getPlayer($args[1])->getName()."'s skin.");
+                            }
+                            else{
+                                $sender->sendMessage("§cThat player could not be found.");
+                            }
+                        }
+                        else{
+                            $sender->sendMessage("§cPlease specify a valid player.");
                         }
                     }
                     break;
@@ -45,6 +53,21 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
                     }
                     else{
                         
+                    }
+                    break;
+                case "touch":
+                    if($sender instanceof Player){
+                        if($this->getPlugin()->hasTouchMode($sender)){
+                            $this->getPlugin()->setTouchMode($sender, false);
+                            $sender->sendMessage("§eSkin-touch mode disabled.");
+                        }
+                        else{
+                            $this->getPlugin()->setTouchMode($sender, true);
+                            $sender->sendMessage("§eSkin-touch mode enabled. Tap on a player to get their skin.");
+                        }
+                    }
+                    else{
+                        $sender->sendMessage("§cPlease run this command in-game.");
                     }
                     break;
             }
