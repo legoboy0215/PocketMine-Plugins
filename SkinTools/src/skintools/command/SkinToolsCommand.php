@@ -30,6 +30,7 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
             switch(strtolower($args[0])){
                 case "?":
                 case "help":
+                    $this->sendCommandHelp($sender);
                     break;
                 case "morph":
                     if($sender instanceof Player){
@@ -46,6 +47,18 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
                             $sender->sendMessage("§cPlease specify a valid player.");
                         }
                     }
+                    else{
+                        $sender->sendMessage("§cPlease run this command in-game.");
+                    }
+                    break;
+                case "restore":
+                    if($sender instanceof Player){
+                        $sender->setSkin($this->getPlugin()->getSkinData($sender));
+                        $sender->sendMessage("§aYour original skin has been restored.");
+                    }
+                    else{
+                        $sender->sendMessage("§cPlease run this command in-game.");
+                    }
                     break;
                 case "swap":
                     if($sender instanceof Player){
@@ -59,16 +72,19 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
                     if($sender instanceof Player){
                         if($this->getPlugin()->hasTouchMode($sender)){
                             $this->getPlugin()->setTouchMode($sender, false);
-                            $sender->sendMessage("§eSkin-touch mode disabled.");
+                            $sender->sendMessage("§cSkin-touch mode disabled.");
                         }
                         else{
                             $this->getPlugin()->setTouchMode($sender, true);
-                            $sender->sendMessage("§eSkin-touch mode enabled. Tap on a player to get their skin.");
+                            $sender->sendMessage("§aSkin-touch mode enabled. Tap on a player to get their skin.");
                         }
                     }
                     else{
                         $sender->sendMessage("§cPlease run this command in-game.");
                     }
+                    break;
+                default:
+                    $sender->sendMessage("Usage: ".$this->getUsage());
                     break;
             }
         }
