@@ -36,4 +36,10 @@ class SkinTools extends PluginBase{
     public function getSkinData(Player $player){
         return $this->skintools["skinData"][strtolower($player->getName())];
     }
+    public function removeSkinData(Player $player){
+        if($this->isSkinStored($player)) unset($this->skintools["skinData"][strtolower($player->getName())]);
+    }
+    public function isSkinStored(Player $player){
+        return $this->skintools["skinData"][strtolower($player->getName())] !== null;
+    }
 }

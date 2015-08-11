@@ -23,7 +23,12 @@ class SkinToolsCommand extends Command implements PluginIdentifiableCommand{
         return $this->plugin;
     }
     private function sendCommandHelp(CommandSender $sender){
-
+        $sender->sendMessage("§bSkinTools commands:");
+        $sender->sendMessage("§a/skintools help §c- §fShows all the sub-commands for SkinTools");
+        $sender->sendMessage("§a/skintools morph §c- §fSets user's skin to that of the specified player's");
+        $sender->sendMessage("§a/skintools restore §c- §fRestores user's skin to the skin they joined with");
+        $sender->sendMessage("§a/skintools swap §c- §fSwaps skins with the specified player");
+        $sender->sendMessage("§a/skintools touch §c- §fToggles touch mode");
     }
     public function execute(CommandSender $sender, $label, array $args){
         if(isset($args[0])){

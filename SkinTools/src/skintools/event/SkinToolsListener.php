@@ -5,6 +5,7 @@ namespace skintools\event;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerLoginEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 use pocketmine\Player;
 use skintools\SkinTools;
@@ -30,5 +31,10 @@ class SkinToolsListener implements Listener{
     public function onPlayerLogin(PlayerLoginEvent $event){
         $this->getPlugin()->storeSkinData($event->getPlayer());
         $this->getPlugin()->setTouchMode($event->getPlayer(), false);
+    }
+    public function onPlayerQuit(PlayerQuitEvent $event){
+        if($this->getPlugin()->isSkinStored($event->getPlayer())){
+            $this->getPlugin()->removeSkinData($event->getPlayer());
+        }
     }
 }

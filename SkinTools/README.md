@@ -11,7 +11,9 @@ Main command: **skintools**, **st**
 |----|-----------|
 |help|Shows all the sub-commands for SkinTools|
 |morph|Sets user's skin to that of the specified player's|
+|restore|Restores user's skin to the skin they joined with|
 |swap|Swaps skins with the specified player|
+|toggle|Toggles touch mode|
 
 ###Releases:
 |Version|Release Date|Download|
