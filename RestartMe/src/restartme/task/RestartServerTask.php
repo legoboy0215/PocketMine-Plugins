@@ -16,25 +16,10 @@ class RestartServerTask extends PluginTask{
     public function onRun($currentTick){
         $time = $this->getPlugin()->restartme["restartTime"]--;
         if($time <= $this->getPlugin()->getConfig()->getNested("restart.startCountdown")){
-            if(strtolower($this->getPlugin()->getConfig()->getNested("restart.displayType")) === "message"){
-                $this->getPlugin()->getServer()->broadcastMessage(str_replace("{RESTART_TIME}", $this->getPlugin()->getTimeRemaining(), $this->getPlugin()->getConfig()->getNested("restart.countdownMessage")));
-            }
-            if(strtolower($this->getPlugin()->getConfig()->getNested("restart.displayType")) === "popup"){
-                foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $player){
-                    $player->sendPopup(str_replace("{RESTART_TIME}", $this->getPlugin()->getTimeRemaining(), $this->getPlugin()->getConfig()->getNested("restart.countdownMessage")));
-                }
-            }
-            if(strtolower($this->getPlugin()->getConfig()->getNested("restart.displayType")) === "tip"){
-                foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $player){
-                    $player->sendTip(str_replace("{RESTART_TIME}", $this->getPlugin()->getTimeRemaining(), $this->getPlugin()->getConfig()->getNested("restart.countdownMessage")));
-                }
-            }
+            $this->getPlugin()->broadcastTime($this->getPlugin()->getConfig()->getNested("restart.displayType"));
         }
-        if($time === 0){
-            foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $player){
-                $player->close("", $this->getPlugin()->getConfig()->getNested("restart.quitMessage"));
-            }
-            $this->getPlugin()->getServer()->shutdown();
+        if($time < 0){
+            $this->getPlugin()->initiateRestart(0);
         }
     }
 }

@@ -11,9 +11,15 @@ restart:
  #Sets the message format
  displayType: "message"
  #Sets how players get the countdown message, three options: "message", "popup", "tip"
+ memoryLimit: 1200M
+ #Sets the max memory that can be allocated before server restarts due to overload
+ overloadQuitMessage: "§eServer restarted due to overload."
+ #Sets the message sent to a player when they are kicked because of a memory overload
  quitMessage: "§aServer restarted."
  #Sets the message sent to a player when they are kicked because of a server restart
  restartInterval: 90
  #Sets the interval of the server restart, in minutes
+ restartOnOverload: false
+ #Set to true to allow server restarts when the server's memory is overloaded
  startCountdown: 10
  #Sets the time when to initiate a countdown, n seconds from restarting
