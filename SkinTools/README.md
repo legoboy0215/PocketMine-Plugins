@@ -18,4 +18,4 @@ Main command: **skintools**, **st**
 ###Releases:
 |Version|Release Date|Download|
 |:-------:|------------|:--------:|
-|1.0.0|?|unavailable|
+|1.0.0|August 8, 2015|[available](http://forums.pocketmine.net/plugins/skintools.1364/download?version=2607)|
