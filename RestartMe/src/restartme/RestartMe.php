@@ -61,12 +61,12 @@ class RestartMe extends PluginBase{
                 $this->getServer()->broadcastMessage($message);
                 break;
             case "popup":
-                foreach($this->getServer()->getPlayers() as $player){
+                foreach($this->getServer()->getOnlinePlayers() as $player){
                     $player->sendPopup($message);
                 }
                 break;
             case "tip":
-                foreach($this->getServer()->getPlayers() as $player){
+                foreach($this->getServer()->getOnlinePlayers() as $player){
                     $player->sendTip($message);
                 }
                 break;
@@ -75,12 +75,12 @@ class RestartMe extends PluginBase{
     public function initiateRestart($mode){
         switch($mode){
             case 0:
-                foreach($this->getServer()->getPlayers() as $player){
+                foreach($this->getServer()->getOnlinePlayers() as $player){
                     $player->close("", $this->getConfig()->getNested("restart.quitMessage"));
                 }
                 break;
             case 1:
-                foreach($this->getServer()->getPlayers() as $player){
+                foreach($this->getServer()->getOnlinePlayers() as $player){
                     $player->close("", $this->getConfig()->getNested("restart.overloadQuitMessage"));
                 }
                 break;

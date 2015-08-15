@@ -14,7 +14,7 @@ class CheckMemoryTask extends PluginTask{
 	return $this->plugin;
     }
     public function onRun($currentTick){
-	if(mem_get_usage(true) > $this->getPlugin()->getConfig()->getNested("restart.memoryLimit")){
+	if(memory_get_usage(true) > $this->getPlugin()->getConfig()->getNested("restart.memoryLimit")){
             $this->getPlugin()->initiateRestart(1);
 	}
     }
