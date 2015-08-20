@@ -14,11 +14,11 @@ class RestartServerTask extends PluginTask{
         return $this->plugin;
     }
     public function onRun($currentTick){
-        $time = $this->getPlugin()->restartme["restartTime"]--;
-        if($time <= $this->getPlugin()->getConfig()->getNested("restart.startCountdown")){
+        $this->getPlugin()->subtractTime(1);
+        if($this->getPlugin()->getTime() <= $this->getPlugin()->getConfig()->getNested("restart.startCountdown")){
             $this->getPlugin()->broadcastTime($this->getPlugin()->getConfig()->getNested("restart.displayType"));
         }
-        if($time < 1){
+        if($this->getPlugin()->getTime() < 3){
             $this->getPlugin()->initiateRestart(0);
         }
     }

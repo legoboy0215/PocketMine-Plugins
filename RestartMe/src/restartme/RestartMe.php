@@ -37,15 +37,13 @@ class RestartMe extends PluginBase{
     	$this->restartme["restartTime"] = ($this->getConfig()->getNested("restart.restartInterval") * 60);
         $this->getServer()->getCommandMap()->register("restartme", new RestartMeCommand($this));
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new AutoBroadcastTask($this), ($this->getConfig()->getNested("restart.broadcastInterval") * 20));
-        if($this->getConfig()->getNested("restart.restartOnOverload") === true){
-            $this->getServer()->getScheduler()->scheduleRepeatingTask(new CheckMemoryTask($this), 6000);
-        }
+        if($this->getConfig()->getNested("restart.restartOnOverload") === true) $this->getServer()->getScheduler()->scheduleRepeatingTask(new CheckMemoryTask($this), 6000);
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new RestartServerTask($this), 20);
     }
-    public function getTimeRemaining(){
+    public function getTime(){
     	return $this->restartme["restartTime"];
     }
-    public function setTimeRemaining($seconds){
+    public function setTime($seconds){
     	$this->restartme["restartTime"] = $seconds;
     }
     public function addTime($seconds){
@@ -55,7 +53,7 @@ class RestartMe extends PluginBase{
     	if(is_numeric($seconds)) $this->restartme["restartTime"] -= $seconds;
     }
     public function broadcastTime($messageType){
-        $message = str_replace("{RESTART_TIME}", $this->getTimeRemaining(), $this->getConfig()->getNested("restart.countdownMessage"));
+        $message = str_replace("{RESTART_TIME}", $this->getTime(), $this->getConfig()->getNested("restart.countdownMessage"));
         switch(strtolower($messageType)){
             case "message":
                 $this->getServer()->broadcastMessage($message);
