@@ -1,13 +1,13 @@
 <?php
 
-namespace rocketpad\event;
+namespace rocketpads\event;
 
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\Listener;
-use rocketpad\RocketPad;
+use rocketpads\RocketPads;
 
 class RocketPadListener implements Listener{
-    public function __construct(RocketPad $plugin){
+    public function __construct(RocketPada $plugin){
         $this->plugin = $plugin;
     }
     public function getPlugin(){

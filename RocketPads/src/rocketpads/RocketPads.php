@@ -1,13 +1,13 @@
 <?php
 
-namespace rocketpad;
+namespace rocketpads;
 
 use pocketmine\block\Block;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
-use rocketpad\event\RocketPadListener;
+use rocketpads\event\RocketPadsListener;
 
-class RocketPad extends PluginBase{
+class RocketPads extends PluginBase{
     public function onEnable(){
         $this->saveFiles();
 	$this->registerAll();

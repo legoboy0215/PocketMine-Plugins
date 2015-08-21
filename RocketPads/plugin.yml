@@ -1,0 +1,17 @@
+name: RocketPads
+main: rocketpads\RocketPads
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+author: Gamecrafter
+description: Save your players the walking, give them a boost!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/RocketPads
+permissions:
+ rocketpads:
+  default: op
+  children:
+   rocketpads.action:
+    default: op
+    children:
+     rocketpads.action.create:
+      default: op
