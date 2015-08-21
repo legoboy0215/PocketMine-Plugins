@@ -1,0 +1,17 @@
+name: RocketPad
+main: rocketpad\RocketPad
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+author: Gamecrafter
+description: Give your players a boost!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/RocketPad
+permissions:
+ restartme:
+  default: op
+  children:
+   restartme.action:
+    default: op
+    children:
+     restartme.action.create:
+      default: op
