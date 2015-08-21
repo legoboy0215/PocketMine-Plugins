@@ -7,7 +7,7 @@ use pocketmine\event\Listener;
 use rocketpads\RocketPads;
 
 class RocketPadListener implements Listener{
-    public function __construct(RocketPada $plugin){
+    public function __construct(RocketPads $plugin){
         $this->plugin = $plugin;
     }
     public function getPlugin(){
