@@ -40,7 +40,7 @@ class RocketPads extends PluginBase{
         if(is_array($this->getConfig()->getNested("pad.blockId"))) return in_array($block->getId().":".$block->getDamage(), $this->getConfig()->getNested("pad.blockId"));
     }
     public function getBaseValue(){
-        return (int) $this->getConfig()->getNested("pad.baseValue");
+        return $this->getConfig()->getNested("pad.baseValue");
     }
     public function getLaunchDistance(){
         return (int) $this->getConfig()->getNested("pad.launchDistance");
