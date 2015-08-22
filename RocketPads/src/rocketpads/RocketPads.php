@@ -31,13 +31,16 @@ class RocketPads extends PluginBase{
         }
     }
     private function registerAll(){
-    	$this->getServer()->getPluginManager()->registerEvents(new RocketPadListener($this), $this);
+    	$this->getServer()->getPluginManager()->registerEvents(new RocketPadsListener($this), $this);
     }
     public function isRocketPad(Block $block){
         return $this->checkBlock($block) === true;
     }
     public function checkBlock(Block $block){
         if(is_array($this->getConfig()->getNested("pad.blockId"))) return in_array($block->getId().":".$block->getDamage(), $this->getConfig()->getNested("pad.blockId"));
+    }
+    public function getBaseValue(){
+        return (int) $this->getConfig()->getNested("pad.baseValue");
     }
     public function getLaunchDistance(){
         return (int) $this->getConfig()->getNested("pad.launchDistance");
@@ -46,16 +49,16 @@ class RocketPads extends PluginBase{
         if($this->isRocketPad($player->getLevel()->getBlock($player->floor()->subtract(0, 1, 0)))){
             switch($player->getDirection()){
                 case 0:
-                    $player->knockBack($player, 0, $this->getLaunchDistance(), 0);
+                    $player->knockBack($player, 0, $this->getLaunchDistance(), 0, $this->getBaseValue());
                     break;
                 case 1:
-                    $player->knockBack($player, 0, 0, $this->getLaunchDistance());
+                    $player->knockBack($player, 0, 0, $this->getLaunchDistance(), $this->getBaseValue());
                     break;
                 case 2:
-                    $player->knockBack($player, 0, abs($this->getLaunchDistance()), 0);
+                    $player->knockBack($player, 0, -$this->getLaunchDistance(), 0, $this->getBaseValue());
                     break;
                 case 3:
-                    $player->knockBack($player, 0, 0, abs($this->getLaunchDistance()));
+                    $player->knockBack($player, 0, 0, -$this->getLaunchDistance(), $this->getBaseValue());
                     break;
             }
         }

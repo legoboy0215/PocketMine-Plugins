@@ -6,7 +6,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\Listener;
 use rocketpads\RocketPads;
 
-class RocketPadListener implements Listener{
+class RocketPadsListener implements Listener{
     public function __construct(RocketPads $plugin){
         $this->plugin = $plugin;
     }
